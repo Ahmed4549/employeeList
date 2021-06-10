@@ -1,0 +1,23 @@
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.button {
+  font: inherit;
+  border: 1px solid #3498db;
+  background: #3498db;
+  color: white;
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.button:hover,
+.button:active {
+  background: #2874a6;
+  border-color: #2874a6;
+}
+
+.button:focus {
+  outline: none;
+}
