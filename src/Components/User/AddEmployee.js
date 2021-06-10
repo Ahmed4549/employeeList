@@ -53,6 +53,7 @@ const AddUser = (props) => {
         <form onSubmit={addUserHandler}>
           <label htmlFor="employeeName">Employee name</label>
           <input
+            autoComplete="off"
             value={enteredEmployeename}
             onChange={employeeNameChangeHandler}
             type="text"
@@ -61,6 +62,7 @@ const AddUser = (props) => {
           />
           <label htmlFor="employeeName">Role</label>
           <input
+            autoComplete="off"
             value={enteredRole}
             onChange={employeeRoleChangeHandler}
             type="text"
@@ -69,6 +71,7 @@ const AddUser = (props) => {
           />
           <label htmlFor="age">Age</label>
           <input
+            autoComplete="off"
             value={enteredAge}
             onChange={ageChangeHandler}
             type="number"
