@@ -18,7 +18,7 @@
   }
   
   .header {
-    background: #3498DB;
+  background-image: linear-gradient(120deg, #62c9fc 0%, #59fc95 100%);
     padding: 1rem;
   }
   

@@ -30,9 +30,9 @@ const AddUser = (props) => {
       });
       return;
     }
-    localStorage.setItem('Employee', enteredEmployeename)
-    localStorage.setItem('Role', enteredRole)
-    localStorage.setItem('Age', enteredAge)
+    sessionStorage.setItem("Employee", enteredEmployeename);
+    sessionStorage.setItem("Role", enteredRole);
+    sessionStorage.setItem("Age", enteredAge);
     props.onAddUser(enteredEmployeename, enteredRole, enteredAge);
     setEnteredEmployeename("");
     setEnteredAge("");
@@ -54,7 +54,7 @@ const AddUser = (props) => {
     <div>
       <Card className={style.input}>
         <form onSubmit={addUserHandler}>
-          <label htmlFor="employeeName">Employee name</label>
+          <label htmlFor="employeeName">Employee Name</label>
           <input
             autoComplete="off"
             value={enteredEmployeename}

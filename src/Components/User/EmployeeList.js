@@ -1,30 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "../UI/Card";
 import style from "./EmployeeList.module.css";
 
 const EmployeeList = (props) => {
-  const [details, setDetails] = useState({
-    empName: "",
-    empRole: "",
-    empAge: "",
-  });
-  const getDetails = () => {
-    setDetails({
-      empName: localStorage.getItem("Employee"),
-      empRole: localStorage.getItem("Role"),
-      empAge: localStorage.getItem("Age"),
-    });
-    setTimeout(() => {
-      console.log(details);
-    }, 3000);
+  const deleteHandler = (key) => {
+    console.log(key);
   };
   return (
     <Card className={style.users}>
       <ul>
         {props.employees.map((employee, i) => (
           <li key={i}>
-            Name: {employee.name} <br />
-            Role: {employee.role} <br /> Age: {employee.age} y/o
+            <div>
+              <div className={style.userListHead}>Name:</div> {employee.name}
+            </div>
+            <div>
+              <div className={style.userListHead}>Role:</div> {employee.role}{" "}
+            </div>
+            <div>
+              <div className={style.userListHead}>Age:</div> {employee.age} y/o
+            </div>
           </li>
         ))}
       </ul>
