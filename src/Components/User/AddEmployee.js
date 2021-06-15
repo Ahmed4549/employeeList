@@ -30,6 +30,9 @@ const AddUser = (props) => {
       });
       return;
     }
+    localStorage.setItem('Employee', enteredEmployeename)
+    localStorage.setItem('Role', enteredRole)
+    localStorage.setItem('Age', enteredAge)
     props.onAddUser(enteredEmployeename, enteredRole, enteredAge);
     setEnteredEmployeename("");
     setEnteredAge("");
